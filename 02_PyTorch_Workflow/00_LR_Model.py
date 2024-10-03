@@ -22,4 +22,20 @@ class LinearRegressionModule(nn.Module):
         '''Any subclass of nn.Module needs to overwrite forward() (this defines the forward computation of the model). In this case, forward() method implements the LinearRegressions Module.'''
         return self.weights * x + self.bias
     
+# Create a random seed
+torch.manual_seed(42)
 
+# Create an instance of the model (this is a subclass of nn.Module)
+model_0 = LinearRegressionModel()
+
+# Check out the parameters.
+list(model_0.parameters())
+
+# List named parameters. 
+model_0.state_dict()
+
+# Make predictions with model 
+with torch.inference_mode():
+    y_prds = model_0(X_test)
+
+y_preds
