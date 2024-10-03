@@ -535,7 +535,7 @@ GPUs = faster computation on numbers.
 """
 
 # 1. Gettings GPUs.
-!nvidia-smi
+# !nvidia-smi
 
 # Check for GPU access with PyTorch
 import torch
